@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết truyện - TRUYENQQ</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/register.css">
+    <link rel="stylesheet" href="./css/forget_pass.css">
+    <link rel="stylesheet" href="./css/Manh.css"> 
+    <link href="https://cdn.boxicons.com/2.0.7/css/boxicons.min.css" rel="stylesheet">
+    
+    
+
+    <style>
+        html, body { height: 100%; margin: 0; }
+        body {min-height: 100vh; }
+    </style>
+</head>                  
+<body>
+    <header>
+        <div class="top">
+            <div class="left">
+                <h1>
+                    <a href="Main_index.html" ><img src="./truyen_img/logo-icon.png" alt="Logo"s>TRUYEN<span class="color">QQ</span></a>
+                </h1>
+                <input type="text" name="search" placeholder="Tìm kiếm truyện..." >
+            </div>
+            <div class="right">
+                <button onclick="openRegister()">Đăng ký</button>
+                <button onclick="openLogin()">Đăng nhập</button>
+            </div>
+        </div>
+        <div class ="menu">
+            <div class="middle-menu">
+                <ul>
+                    <li><a href="Main_index.html" >Trang Chủ</a></li>
+                    <li class="submenu">
+                        <a href="#2" >Thể Loại<i class="bx bx-caret-down"></i></a>
+                        <div class="hidenmenu">
+                            <div>
+                                <a href="#">Action</a>
+                                <a href="#">Detective</a>
+                                <a href="#">Huyền Huyễn</a>
+                                <a href="#">Martial Arts</a>
+                                <a href="#">Sci-fi</a>
+                                <a href="#">Supernatural</a>
+                            </div>
+
+                            <div>
+                                <a href="#">Adventure</a>
+                                <a href="#">Doujinshi</a>
+                                <a href="#">Isekai</a>
+                                <a href="#">Military</a>
+                                <a href="#">Seinen</a>
+                                <a href="#">Tragedy</a>
+                            </div>
+
+                            <div>
+                                <a href="#">Anime</a>
+                                <a href="#">Drama</a>
+                                <a href="#">Josei</a>
+                                <a href="#">Mystery</a>
+                                <a href="#">Shoujo</a>
+                                <a href="#">Trọng Sinh</a>
+                            </div>
+
+                            <div>
+                                <a href="#">Chuyển Sinh</a>
+                                <a href="#">Fantasy</a>
+                                <a href="#">Mafia</a>
+                                <a href="#">Ngôn Tình</a>
+                                <a href="#">Shoujo Ai</a>
+                                <a href="#">Truyện Màu</a>
+                            </div>
+
+                            <div>
+                                <a href="#">Cổ Đại</a>
+                                <a href="#">Gender Bender</a>
+                                <a href="#">Magic</a>
+                                <a href="#">One Shot</a>
+                                <a href="#">Shounen</a>
+                                <a href="#">Webtoon</a>
+                            </div>
+
+                            <div>
+                                <a href="#">Comedy</a>
+                                <a href="#">Harem</a>
+                                <a href="#">Manga</a>
+                                <a href="#">Psychological</a>
+                                <a href="#">Shounen Ai</a>
+                                <a href="#">Xuyên Không</a>
+                            </div>
+
+                            <div>
+                                <a href="#">Comic</a>
+                                <a href="#">Historical</a>
+                                <a href="#">Manhua</a>
+                                <a href="#">Romance</a>
+                                <a href="#">Slice of Life</a>
+                            </div>
+
+                            <div>
+                                <a href="#">Demons</a>
+                                <a href="#">Horror</a>
+                                <a href="#">Manhwa</a>
+                                <a href="#">School life</a>
+                                <a href="#">Sports</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                       <div class="submenu">
+                            <a href="#3">Xếp Hạng <i class="bx bx-caret-down"></i></a>
+                            <div class="hidenmenu">
+                                <a href="#">Top ngày</a>
+                                <a href="#">Top tuần</a>
+                                <a href="#">Top tháng</a>
+                                <a href="#">Yêu thích</a>
+                                <a href="#">Mới cập nhập</a>
+                                <a href="#">Truyện mới</a>
+                                <a href="#">Truyện Full</a>
+                                <a href="#">Truyện ngẫu nhiên</a>
+                            </div>
+                       </div>
+                    </li>
+                    <li><a href="#4">Tìm Truyện</a></li>
+                    <li><a href="#5">Lịch Sử</a></li>
+                    <li><a href="#6">Theo Dõi</a></li>
+                    <li><a href="#7">Discord</a></li>
+                    <li><a href="#8">Fanpage</a></li>
+                    <li><a href="#9">Yêu Cầu Dịch Truyện</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div id="models">
+        <!-- login -->
+        <div class="overlay" id="overlay"></div>    
+        <div class="login_box" id="login_box">
+            <h3>ĐĂNG NHẬP</h3>
+            <input type="text" placeholder="Email">
+            <input type="password" placeholder="Mật khẩu">
+            <div class="mid">
+                <div>
+                    <a href = "#" onclick="openRegister(); return false;">Đăng ký</a>
+                    <a href="#" onclick="openForgetbox(); return false;">Quên mật khẩu?</a>
+                </div>
+                <div class="button">
+                    <button class="bt1">Đăng nhập</button>
+                    <button class="bt2" onclick="closeAll()">Hủy</button>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div>
+                <button class="fb">f</button>
+                <button class="gg">G</button>
+            </div>
+        </div>
+
+        <!--Register-->
+        <div class="register-box" id="register-box">
+            <h3>ĐĂNG KÝ MỚI</h3>
+            <div class="register-top">
+                <input type="text" placeholder="Email">
+                <input type="password" placeholder="Mật khẩu">
+                <div class="input-bot">
+                    <input type="text" placeholder="Mã xác nhận">
+                    <i class="bx bx-refresh-ccw-alt"></i> 
+                </div>
+            </div>
+            <div class="register-bot">
+                <a href="#" onclick="openLogin(); return false;">Đăng nhập</a>
+                <div>
+                    <button class="register-btn">Đăng ký</button>
+                    <button class="cancel-btn" onclick="closeAll()">Hủy</button>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div>
+                <button class="fb">f</button>
+                <button class="gg">G</button>
+            </div>
+        </div>
+
+        <!--forget password-->
+        <div class="forget_pass_box" id="forget_pass_box">
+            <h3>QUÊN MẬT KHẨU</h3>
+            <div class="forget_top">
+                <input type="text" placeholder="Email">
+                <div>
+                    <input type="text" placeholder="Mã xác nhận">
+                    <i class="bx bx-refresh-ccw-alt"></i> 
+                </div>
+                <button>Gửi</button>
+            </div>
+            <div class="forget_bot">
+                <a href="#" onclick="openLogin(); return false;">Đăng nhập</a>
+                <button onclick="closeAll()">Hủy</button>
+            </div>
+            <div class="divider"></div>
+            <div>
+                <button class="fb">f</button>
+                <button class="gg">G</button>
+            </div>
+        </div>
+
+   </div>
+
+
+    <main>
+        <div class="novel-detail-container">
+            <div class="breadcrumb">
+                <a href="Main_index.html">Trang chủ</a> / <span>Đấu phá thương khung</span>
+            </div>
+
+            <div class="novel-info-box">
+                <div class="novel-cover">
+                    <img src="./truyen_img/truyen 1.png" alt="Bìa truyện Đấu phá thương khung">
+                </div>
+                
+                <div class="novel-details">
+                    <h1 class="novel-title">Đấu phá thương khung</h1>
+                    
+                    <ul class="meta-info">
+                        <li><strong>Tác giả:</strong> Mạnh Trấn</li>
+                        <li><strong>Trạng thái:</strong> Đang tiến hành</li>
+                        <li><strong>Đánh giá:</strong> 5.0/5</li>
+                        <li><strong>Lượt xem:</strong> 12,500</li>
+                    </ul>
+                    
+                    <div class="novel-description">
+                        <p>M...</p> </div>
+                    
+                    <div class="action-buttons">
+                        <a href="doc.html" class="btn btn-primary">Đọc từ đầu</a>
+                        <button class="btn btn-secondary">Theo dõi</button>
+                        <a href="doc.html" class="btn btn-success">Đọc tiếp Chương 5</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chapter-list-section">
+                <h2>Danh sách chương</h2>
+                <ul class="chapter-list">
+                    <li><a href="doc.html">Chương 1: Trẻ mồ côi</a> <span class="date">10/04/2026</span></li>
+                    <li><a href="doc.html">Chương 2: Nhận nuôi</a> <span class="date">10/04/2026</span></li>
+                    <li><a href="doc.html">Chương 3: Cuộc sống mới</a> <span class="date">11/04/2026</span></li>
+                    <li><a href="doc.html">Chương 4: Gặp gỡ lần đầu</a> <span class="date">11/04/2026</span></li>
+                    <li><a href="doc.html">Chương 5: Bí mật kinh hoàng</a> <span class="date">Hôm qua</span></li>
+                    <li><a href="doc.html">Chương 6: Sự thật phơi bày</a> <span class="date">Vừa xong</span></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    
+    <script src="./js/main.js"></script>
+</body>
+</html>

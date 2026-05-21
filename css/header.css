@@ -1,0 +1,160 @@
+.color{
+    color: #f18121;
+}
+h1{
+    font-size: 25px;
+    font-weight: 200;
+    font-family: "Quicksand", sans-serif;
+}
+h1 img{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    padding-top: 5px;
+}
+.top{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+    height: 65px;
+}
+
+.top .left{
+    display: flex;
+    align-items: center;
+    justify-content: left   ;
+    gap: 15px;
+    width: 50%;
+}
+.top .left a{
+    text-decoration: none;
+    color: black;
+}
+.top .left a:hover{
+    cursor: pointer;
+}
+
+
+.top .left input{
+    width: 400px;
+    height: 42px;
+    border-radius: 40px;
+    border: 1px solid lightgrey;
+    padding-left: 10px;
+    position: relative;
+    background-color: rgb(242, 242, 242);
+}
+
+.top .right{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.top .right button{
+    background-color: #3F94D5;
+    color:#FFFFFF;
+    height: 40px;
+    width: 120px;
+    border-radius: 10px;
+    border: none;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    padding: 1px 6px;
+    margin: 5px 5px;
+    cursor: pointer;
+
+}
+.top .right button:hover{   
+    cursor: pointer;
+}
+
+.menu {
+    background-color: #f18121;
+    height: 56px;
+    display: flex;               
+    justify-content: space-around; 
+    align-items: center;
+    padding: 0 20px;              
+    position: relative;
+}
+
+.menu::after {
+    content: "";
+    display: block;
+    width: 250px; 
+}
+
+.menu .middle-menu {
+    width: 50%;                   
+    display: flex;
+    justify-content: flex-start;  
+    height: 100%;
+}
+
+.menu .middle-menu ul {
+    display: flex;
+    gap: 5px;
+    padding: 0;           
+    margin: 0;
+    list-style: none;
+    width: 100%;         
+    align-items: center;
+}
+
+.menu .middle-menu ul li:last-child{
+    flex-grow: 1;
+}
+.menu .middle-menu ul li:last-child a{
+    width: 100%;
+    justify-content: flex-start;
+}
+
+
+.menu .middle-menu li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    width: auto;
+    white-space: nowrap;
+    padding: 0 15px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+
+}
+
+.menu .middle-menu li a:hover{
+    background-color: #ee974b;
+    color: white !important;
+}
+
+.hidenmenu{
+    position:absolute;
+    top:100%;
+    left:0;
+    padding-left: 145px;
+    background-color: whitesmoke;
+    display:none;
+    width: 100%;
+    height: auto-fit;
+    z-index: 9999;
+    
+}
+.submenu .hidenmenu a{
+    color:black !important;
+    text-decoration: none;
+    width: 100%;
+}
+
+.submenu:hover .hidenmenu{
+    display:flex;
+    gap:20px;
+    flex-direction: row;
+}
+

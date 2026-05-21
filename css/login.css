@@ -1,0 +1,135 @@
+.overlay{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+
+    background: rgb(0,0,0,0.4);
+    backdrop-filter: blur(5px);
+
+    display: none;
+    z-index: 900;
+    pointer-events: none;
+}
+
+.login_box{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    height: 410px;
+    width: 430px;
+    padding: 20px;
+    margin: 10px;
+
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    
+    background: white;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1001;
+
+}
+
+.login_box.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.overlay.active{
+    display: block;
+}
+
+.login_box h3{
+    font-size: 25px;
+    padding-bottom: 30px;
+}
+
+.login_box input{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px ;
+    border: 1px solid lightgray;
+    padding-left: 15px;
+}
+
+.login_box .mid{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.login_box .mid a{
+    text-decoration: none;
+    color: black;
+}
+
+.login_box .mid a:hover{
+    color:  #f18121 !important;
+    transform: 0.3s;
+    cursor: pointer;
+}
+
+.button{
+    display: grid;
+    grid-template-columns: 100px 55px;
+    gap: 10px;
+    height: 40px;
+}
+
+.bt1{
+    background-color: #f18121;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+.bt1:hover{
+    cursor: pointer;
+}
+
+.bt2{
+    background-color: #3F94D5;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+.bt2:hover{
+    cursor: pointer;
+}
+
+.divider{
+    width: 100%;
+    height: 1px;
+    background-color: gray;
+}
+
+.fb{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 25px;
+    color: white;
+    background-color:rgb(26, 148, 235);
+    border:none;
+    margin-right: 5px;
+}
+
+.gg{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 25px;
+    color: white;
+    background-color:rgb(235, 103, 26);
+    border:none;
+    margin-left: 5px;
+}

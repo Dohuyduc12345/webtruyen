@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    
+</head>
+<body>
+    <button onclick="openmodel()">đăng nhập</button>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="box">
+            
+        <div class="login_box" id="login_box">
+            <h3>ĐĂNG NHẬP</h3>
+            <input type="textbox" placeholder="Email">
+            <input type="password" placeholder="Mật khẩu">
+            <div class="mid">
+                <div>
+                    <a href = "#">Đăng ký</a>
+                    <a href="#">Quên mật khẩu?</a>
+                </div>
+                <div class="button">
+                    <button class="bt1">Đăng nhập</button>
+                    <button class="bt2" onclick="closemodel()">Hủy</button>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div>
+                <button class="fb">f</button>
+                <button class="gg">G</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="login.js"></script>
+
+</body>
+</html>

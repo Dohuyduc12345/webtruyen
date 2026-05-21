@@ -1,0 +1,115 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #dddddd; 
+    color: #2c3e50;
+}
+
+/* Layout Chính */
+.content-container {
+    max-width: 1000px; 
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: #1a252f;
+    border-left: 4px solid #ff4757; 
+    padding-left: 10px;
+}
+
+ /*  Lưới Truyện (4 Cột) */
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+}
+
+.story-grid > a{
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    min-width: 0;
+}
+
+
+/*  Thiết Kế Thẻ Truyện */
+.story-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06); /* Bóng đổ nhẹ nhàng */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+    width:  100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hiệu ứng khi lướt chuột qua thẻ truyện */
+.story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 71, 87, 0.15); /* Bóng đổ ánh đỏ cam khi hover */
+}
+
+/* Khu vực chứa hình ảnh bìa */
+.image-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.image-wrapper img {
+    width: 100%;
+    aspect-ratio: 2 / 3; /* Giữ tỷ lệ chuẩn 2:3 */
+    object-fit: cover;
+    display: block;
+}
+
+/* Tag hiển thị số chương mới nhất */
+.chapter-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: linear-gradient(135deg, #ff6b81 0%, #ff4757 100%); 
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(255, 71, 87, 0.4);
+}
+
+/* Tên truyện */
+.story-title {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 10px;
+    text-align: center;
+    width: 100%;
+    background: linear-gradient(to right, #2c3e50, #34495e); 
+    color: #ffffff; 
+    border-top: 2px solid #ff4757;
+
+    /* Quan trọng */
+    white-space: nowrap;        /* Không xuống dòng */
+    overflow: hidden;           /* Ẩn phần dư */
+    text-overflow: ellipsis;    /* Hiển thị "..." */
+
+    transition: all 0.3s ease;
+}
+
+/* Đổi màu khi hover vào thẻ truyện */
+.story-card:hover .story-title {
+    background: linear-gradient(to right, #1a252f, #2c3e50); 
+    color: #ff6b81; 
+}

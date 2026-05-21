@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="register.css" rel="stylesheet">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <button onclick="openRegister()">ĐĂNG KÝ</button>
+    
+    <div class="overlay" id="overlay"></div>
+
+    <div>
+        <div class="register-box" id="register-box">
+            <h3>ĐĂNG KÝ MỚI</h3>
+            <div class="register-top">
+                <input type="text" placeholder="Email">
+                <input type="password" placeholder="Mật khẩu">
+                <div class="input-bot">
+                    <input type="text" placeholder="Mã xác nhận">
+                    <i class="bx bx-refresh-ccw-alt"></i> 
+                </div>
+            </div>
+            <div class="register-bot">
+                <a href="#">Đăng nhập</a>
+                <div>
+                    <button class="register-btn">Đăng ký</button>
+                    <button class="cancel-btn" onclick="closeAll()">Hủy</button>
+                </div>
+            </div>
+            <div class="register-divider"></div>
+            <div>
+                <button calss="register-fb">f</button>
+                <button class="register-gg">G</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

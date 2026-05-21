@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>truyentranh</title>
+    <link href="./css/header.css" rel="stylesheet">
+    <link href="./css/content.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/register.css">
+    <link rel="stylesheet" href="./css/forget_pass.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <style>
+        html,body{
+            height: 100%;
+            margin: 0;
+        }
+        body{
+            display:grid;
+            min-height: 100vh;
+            grid-template-rows: auto 1fr auto;
+        }
+        #models{
+            display:contents;
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <div class="top">
+            <div class="left">
+                <h1>
+                    <a href="Main_index.html" ><img src="./truyen_img/logo-icon.png" alt="Logo"s>TRUYEN<span class="color">QQ</span></a>
+                </h1>
+                <input type="text" name="search" placeholder="Tìm kiếm truyện..." >
+            </div>
+            <div class="right">
+                <button onclick="openRegister()">Đăng ký</button>
+                <button onclick="openLogin()">Đăng nhập</button>
+            </div>
+        </div>
+        <div class ="menu">
+            <div class="middle-menu">
+                <ul>
+                    <li><a href="Main_index.html" >Trang Chủ</a></li>
+                    <li class="submenu">
+                        <a href="#2" >Thể Loại<i class="bx bx-caret-down"></i></a>
+                        <div class="hidenmenu">
+                            <div>
+                                <a href="#">Action</a>
+                                <a href="#">Detective</a>
+                                <a href="#">Huyền Huyễn</a>
+                                <a href="#">Martial Arts</a>
+                                <a href="#">Sci-fi</a>
+                                <a href="#">Supernatural</a>
+                            </div>
+
+                            <div>
+                                <a href="#">Adventure</a>
+                                <a href="#">Doujinshi</a>
+                                <a href="#">Isekai</a>
+                                <a href="#">Military</a>
+                                <a href="#">Seinen</a>
+                                <a href="#">Tragedy</a>
+                            </div>
+
+                            <div>
+                                <a href="#">Anime</a>
+                                <a href="#">Drama</a>
+                                <a href="#">Josei</a>
+                                <a href="#">Mystery</a>
+                                <a href="#">Shoujo</a>
+                                <a href="#">Trọng Sinh</a>
+                            </div>
+
+                            <div>
+                                <a href="#">Chuyển Sinh</a>
+                                <a href="#">Fantasy</a>
+                                <a href="#">Mafia</a>
+                                <a href="#">Ngôn Tình</a>
+                                <a href="#">Shoujo Ai</a>
+                                <a href="#">Truyện Màu</a>
+                            </div>
+
+                            <div>
+                                <a href="#">Cổ Đại</a>
+                                <a href="#">Gender Bender</a>
+                                <a href="#">Magic</a>
+                                <a href="#">One Shot</a>
+                                <a href="#">Shounen</a>
+                                <a href="#">Webtoon</a>
+                            </div>
+
+                            <div>
+                                <a href="#">Comedy</a>
+                                <a href="#">Harem</a>
+                                <a href="#">Manga</a>
+                                <a href="#">Psychological</a>
+                                <a href="#">Shounen Ai</a>
+                                <a href="#">Xuyên Không</a>
+                            </div>
+
+                            <div>
+                                <a href="#">Comic</a>
+                                <a href="#">Historical</a>
+                                <a href="#">Manhua</a>
+                                <a href="#">Romance</a>
+                                <a href="#">Slice of Life</a>
+                            </div>
+
+                            <div>
+                                <a href="#">Demons</a>
+                                <a href="#">Horror</a>
+                                <a href="#">Manhwa</a>
+                                <a href="#">School life</a>
+                                <a href="#">Sports</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                       <div class="submenu">
+                            <a href="#3">Xếp Hạng <i class="bx bx-caret-down"></i></a>
+                            <div class="hidenmenu">
+                                <a href="#">Top ngày</a>
+                                <a href="#">Top tuần</a>
+                                <a href="#">Top tháng</a>
+                                <a href="#">Yêu thích</a>
+                                <a href="#">Mới cập nhập</a>
+                                <a href="#">Truyện mới</a>
+                                <a href="#">Truyện Full</a>
+                                <a href="#">Truyện ngẫu nhiên</a>
+                            </div>
+                       </div>
+                    </li>
+                    <li><a href="#4">Tìm Truyện</a></li>
+                    <li><a href="#5">Lịch Sử</a></li>
+                    <li><a href="#6">Theo Dõi</a></li>
+                    <li><a href="#7">Discord</a></li>
+                    <li><a href="#8">Fanpage</a></li>
+                    <li><a href="#9">Yêu Cầu Dịch Truyện</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+   <div id="models">
+    <!-- login -->
+        <div class="overlay" id="overlay"></div>    
+        <div class="login_box" id="login_box">
+            <h3>ĐĂNG NHẬP</h3>
+            <input type="text" placeholder="Email">
+            <input type="password" placeholder="Mật khẩu">
+            <div class="mid">
+                <div>
+                    <a href="#" onclick="openRegister(); return false;">Đăng ký</a> 
+                    <a href="#" onclick="openForgetbox(); return false;">Quên mật khẩu?</a>
+                </div>
+                <div class="button">
+                    <button class="bt1">Đăng nhập</button>
+                    <button class="bt2" onclick="closeAll()">Hủy</button>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div>
+                <button class="fb">f</button>
+                <button class="gg">G</button>
+            </div>
+        </div>
+
+        <!--Register-->
+        <div class="register-box" id="register-box">
+            <h3>ĐĂNG KÝ MỚI</h3>
+            <div class="register-top">
+                <input type="text" placeholder="Email">
+                <input type="password" placeholder="Mật khẩu">
+                <div class="input-bot">
+                    <input type="text" placeholder="Mã xác nhận">
+                    <i class="bx bx-refresh-ccw-alt"></i> 
+                </div>
+            </div>
+            <div class="register-bot">
+                <a href="#" onclick="openLogin(); return false;">Đăng nhập</a>
+                <div>
+                    <button class="register-btn">Đăng ký</button>
+                    <button class="cancel-btn" onclick="closeAll()">Hủy</button>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div>
+                <button class="fb">f</button>
+                <button class="gg">G</button>
+            </div>
+        </div>
+        <!--forget password-->
+        <div class="forget_pass_box" id="forget_pass_box">
+            <h3>QUÊN MẬT KHẨU</h3>
+            <div class="forget_top">
+                <input type="text" placeholder="Email">
+                <div>
+                    <input type="text" placeholder="Mã xác nhận">
+                    <i class="bx bx-refresh-ccw-alt"></i> 
+                </div>
+                <button>Gửi</button>
+            </div>
+            <div class="forget_bot">
+                <a href="#" onclick="openLogin(); return false;">Đăng nhập</a>
+                <button onclick="closeAll()">Hủy</button>
+            </div>
+            <div class="divider"></div>
+            <div>
+                <button class="fb">f</button>
+                <button class="gg">G</button>
+            </div>
+        </div>
+
+   </div>
+    <main class="content-container">
+        <h2 class="section-title">Truyện Hot</h2>
+
+        <div class="story-grid">
+            <a href="Manh.html"><article class="story-card"><div class="image-wrapper"><img src="./truyen_img/truyen 1.png" alt="Bìa truyện 1"><div class="chapter-badge">Chương 120</div></div><h3 class="story-title">Đấu Phá Thương Khung</h3></article></a>
+            <a href="Manh.html"><article class="story-card"><div class="image-wrapper"><img src="./truyen_img/truyen 2.png" alt="Bìa truyện 2"><div class="chapter-badge">Chương 159</div></div><h3 class="story-title">Tiên Nghịch</h3></article></a>
+            <a href="Manh.html"><article class="story-card"><div class="image-wrapper"><img src="./truyen_img/truyen 3.png" alt="Bìa truyện 3"><div class="chapter-badge">Chương 89</div></div><h3 class="story-title">Võ Luyện Đỉnh Phong</h3></article></a>
+            <a href="Manh.html"><article class="story-card"><div class="image-wrapper"><img src="./truyen_img/truyen 4.png" alt="Bìa truyện 4"><div class="chapter-badge">Chương 36</div></div><h3 class="story-title">Ninja Vùng Ngoại Ô</h3></article></a>
+        </div>
+
+        <h2 class="section-title">Danh sách truyện mới</h2>
+
+        <div class="story-grid">
+            
+            <a href="Manh.html"><article class="story-card"><div class="image-wrapper"><img src="./truyen_img/truyen 5.png" alt="Bìa truyện 5"><div class="chapter-badge">Chương 45</div></div><h3 class="story-title">Thần Đạo Đan Tôn</h3></article></a>
+            <a href="Manh.html"><article class="story-card"><div class="image-wrapper"><img src="./truyen_img/truyen 6.png" alt="Bìa truyện 6"><div class="chapter-badge">Chương 557</div></div><h3 class="story-title">Tổ Chức Hắc Ám</h3></article></a>
+            <a href="Manh.html"><article class="story-card"><div class="image-wrapper"><img src="./truyen_img/truyen 7.png" alt="Bìa truyện 7"><div class="chapter-badge">Chương 78</div></div><h3 class="story-title">Thần Thám Tinh Không</h3></article></a>
+            <a href="Manh.html"><article class="story-card"><div class="image-wrapper"><img src="./truyen_img/truyen 8.png" alt="Bìa truyện 8"><div class="chapter-badge">Chương 919</div></div><h3 class="story-title">Cặp Đôi Học Bá</h3></article></a>
+            <a href="Manh.html"><article class="story-card"><div class="image-wrapper"><img src="./truyen_img/truyen 9.png" alt="Bìa truyện 9"><div class="chapter-badge">Chương 23</div></div><h3 class="story-title">Chư Thiên Ký</h3></article></a>
+
+            <a href="Manh.html"><article class="story-card"><div class="image-wrapper"><img src="./truyen_img/truyen 10.jpg" alt="Bìa truyện 10"><div class="chapter-badge">Chương 120</div></div><h3 class="story-title">Sức Mạnh Tối Đa? Ta Lại Là Vong Linh Sư!</h3></article></a>
+            <a href="Manh.html"><article class="story-card"><div class="image-wrapper"><img src="./truyen_img/truyen 11.jpg" alt="Bìa truyện 11"><div class="chapter-badge">Chương 194</div></div><h3 class="story-title">Gacha Vô Hạn</h3></article></a>
+            <a href="Manh.html"><article class="story-card"><div class="image-wrapper"><img src="./truyen_img/truyen 12.jpg" alt="Bìa truyện 12"><div class="chapter-badge">Chương 45</div></div><h3 class="story-title">Trọng Khải Dị Thế: Ta Dùng Gương Thần Trở Thành Vô Địch</h3></article></a>
+            <a href="Manh.html"><article class="story-card"><div class="image-wrapper"><img src="./truyen_img/truyen 13.png" alt="Bìa truyện 13"><div class="chapter-badge">Chương 56</div></div><h3 class="story-title">Tinh Võ Thần Quyết</h3></article></a>
+
+            <a href="Manh.html"><article class="story-card"><div class="image-wrapper"><img src="./truyen_img/truyen 14.png" alt="Bìa truyện 14"><div class="chapter-badge">Chương 210</div></div><h3 class="story-title">Đảo Hải Tặc</h3></article></a>
+            <a href="Manh.html"><article class="story-card"><div class="image-wrapper"><img src="./truyen_img/truyen 15.png" alt="Bìa truyện 15"><div class="chapter-badge">Chương 11</div></div><h3 class="story-title">Ngục Tù Vĩnh Hằng</h3></article></a>
+            <a href="Manh.html"><article class="story-card"><div class="image-wrapper"><img src="./truyen_img/truyen 16.png" alt="Bìa truyện 16"><div class="chapter-badge">Chương 8</div></div><h3 class="story-title">Yêu Thần Kỳ</h3></article></a>
+
+        </div>
+    </main>
+        
+    <footer>
+        <div class="footer_box">
+            <h1>
+                <a href="Main_index.html"><img src="./truyen_img/logo-icon.png" alt="Logo"s>TRUYEN<span class="color">QQ</span></a>
+            </h1>
+            <div class="fanpage-box">
+                <p>Hãy theo dõi fanpage của chúng tôi để cập nhật truyện mới nhất!</p>
+                <a href="https://www.facebook.com/epu.edu.vn" target="_blank" class="fanpage-btn">
+                    FANPAGE
+                </a>
+            </div>
+            <p>Email: truyenqq@gmail.com</p>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
